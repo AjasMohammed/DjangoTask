@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Auth{% endblock title %}
+
+{% block body %}
+<form method='POST' >
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-outline-dark" type="submit">Submit</button>
+</form>
+{% endblock body %}
